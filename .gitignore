@@ -1,0 +1,27 @@
+# Build and compiled artifacts
+*.o
+*.so
+*.dylib
+*.dll
+*.a
+build/
+bin/catenary_c
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+.pytest_cache/
+
+# Runtime and telemetry logs
+*.log
+*.csv
+*.tsv
+work/
+telemetry_output/
+
+# macOS metadata
+.DS_Store
+._*

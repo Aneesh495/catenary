@@ -1,0 +1,14 @@
+{
+  "scenario_id": "dual_pantograph_spacing",
+  "description": "Dual pantograph trainset operation with 200m spacing and wave interference",
+  "pantograph": {
+    "configuration": "dual",
+    "spacing_m": 200.0,
+    "speed_kmh": 300.0,
+    "static_preload_n": 90.0
+  },
+  "simulation": {
+    "duration_s": 4.0,
+    "time_step_s": 0.001
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "scenario_id": "crosswind_blowoff",
+  "description": "High crosswind storm inducing aerodynamic catenary lateral blow-off",
+  "environment": {
+    "mean_wind_speed_ms": 22.0,
+    "gust_amplitude_ms": 8.0,
+    "crosswind_angle_deg": 90.0
+  },
+  "simulation": {
+    "duration_s": 3.0,
+    "time_step_s": 0.001
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "scenario_id": "neutral_section_passage",
+  "description": "High-speed train traversing 25 kV substation phase break with automated VCB coasting",
+  "track": {
+    "neutral_section": {
+      "id": "NS-1",
+      "start_position_m": 25000.0,
+      "dead_length_m": 220.0
+    }
+  },
+  "simulation": {
+    "duration_s": 5.0,
+    "time_step_s": 0.001
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "scenario_id": "short_circuit_relay_trip",
+  "description": "Catenary-to-rail fault event triggering ANSI 21 Zone 1 instantaneous feeder trip",
+  "faults": [
+    {
+      "type": "SHORT_CIRCUIT",
+      "location_km": 12.5,
+      "resistance_ohm": 0.5,
+      "trigger_time_s": 0.20
+    }
+  ],
+  "simulation": {
+    "duration_s": 1.0,
+    "time_step_s": 0.001
+  }
+}

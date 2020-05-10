@@ -1,0 +1,28 @@
+{
+  "scenario_id": "regenerative_braking_corridor",
+  "description": "Multi-train regenerative power exchange and wayside BESS energy buffering",
+  "fleet": [
+    {
+      "id": "TRAIN-1",
+      "mode": "motoring",
+      "position_km": 10.0,
+      "tractive_force_kn": 120.0
+    },
+    {
+      "id": "TRAIN-2",
+      "mode": "braking",
+      "position_km": 18.0,
+      "braking_force_kn": 85.0
+    }
+  ],
+  "storage": {
+    "id": "BESS-1",
+    "location_km": 15.0,
+    "capacity_kwh": 2000.0,
+    "max_power_kw": 4000.0
+  },
+  "simulation": {
+    "duration_s": 5.0,
+    "time_step_s": 0.001
+  }
+}

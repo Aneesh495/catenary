@@ -1,0 +1,44 @@
+{
+  "scenario_id": "default_hsr_300kmh",
+  "description": "Baseline 300 km/h single pantograph high-speed run on 2x25 kV catenary",
+  "track": {
+    "num_spans": 10,
+    "span_length_m": 55.0,
+    "catenary_type": "standard_hsr",
+    "stagger_amplitude_m": 0.20
+  },
+  "catenary": {
+    "contact_wire": {
+      "material": "CuAg0.1",
+      "cross_section_mm2": 120.0,
+      "tension_kn": 25.0,
+      "nominal_height_m": 5.30
+    },
+    "messenger_wire": {
+      "material": "Bz-II",
+      "cross_section_mm2": 65.0,
+      "tension_kn": 18.0,
+      "support_height_m": 6.50
+    }
+  },
+  "pantograph": {
+    "model": "lumped_2mass",
+    "speed_kmh": 300.0,
+    "static_preload_n": 90.0,
+    "active_control": true
+  },
+  "electrical": {
+    "substations": [
+      {
+        "id": "TPSS-1",
+        "location_km": 0.0,
+        "capacity_mva": 60.0,
+        "nominal_voltage_v": 27500.0
+      }
+    ]
+  },
+  "simulation": {
+    "duration_s": 3.0,
+    "time_step_s": 0.001
+  }
+}

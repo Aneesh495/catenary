@@ -1,0 +1,34 @@
+{
+  "scenario_id": "high_speed_350kmh",
+  "description": "350 km/h ultra-high-speed dynamic wave amplification run",
+  "track": {
+    "num_spans": 12,
+    "span_length_m": 50.0,
+    "catenary_type": "ultra_high_speed",
+    "stagger_amplitude_m": 0.20
+  },
+  "catenary": {
+    "contact_wire": {
+      "material": "CuMg0.5",
+      "cross_section_mm2": 120.0,
+      "tension_kn": 30.0,
+      "nominal_height_m": 5.30
+    },
+    "messenger_wire": {
+      "material": "Bz-II",
+      "cross_section_mm2": 70.0,
+      "tension_kn": 22.0,
+      "support_height_m": 6.50
+    }
+  },
+  "pantograph": {
+    "model": "lumped_2mass",
+    "speed_kmh": 350.0,
+    "static_preload_n": 110.0,
+    "active_control": true
+  },
+  "simulation": {
+    "duration_s": 3.0,
+    "time_step_s": 0.001
+  }
+}

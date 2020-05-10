@@ -1,0 +1,15 @@
+{
+  "scenario_id": "dropper_failure_transient",
+  "description": "Dynamic transient response of contact wire under sudden dropper breakage",
+  "faults": [
+    {
+      "type": "DROPPER_BREAK",
+      "target_dropper_id": 8,
+      "trigger_time_s": 0.50
+    }
+  ],
+  "simulation": {
+    "duration_s": 2.0,
+    "time_step_s": 0.001
+  }
+}

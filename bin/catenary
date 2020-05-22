@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# catenary CLI executable launcher
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+export IO_PATH="$SCRIPT_DIR:$IO_PATH"
+
+if ! command -v io &> /dev/null; then
+    echo "Error: 'io' interpreter not found in PATH."
+    echo "Install Io language via Homebrew: brew install io"
+    exit 1
+fi
+
+exec io "$SCRIPT_DIR/src/catenary.io" "$@"

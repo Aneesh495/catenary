@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: macos-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Homebrew and install Io
+        run: |
+          brew install io
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Build C ABI shared library
+        run: make build
+
+      - name: Run Io master verification test suite
+        run: ./bin/catenary verify
+
+      - name: Run EN 50318 benchmark
+        run: ./bin/catenary benchmark
+
+      - name: Run Python ctypes test suite
+        run: python3 python/tests/test_pycatenary.py
